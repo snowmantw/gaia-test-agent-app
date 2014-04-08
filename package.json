@@ -1,0 +1,22 @@
+{
+  "name": "gaia-test-agent-app",
+  "version": "0.0.0",
+  "description": "[DEMO] Standalone test-agent app for 3rd-party developers",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/snowmantw/gaia-test-agent-app.git"
+  },
+  "author": "Greg Weng, Evan Tsay",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/snowmantw/gaia-test-agent-app/issues"
+  },
+  "homepage": "https://github.com/snowmantw/gaia-test-agent-app",
+  "devDependencies": {
+    "underscore": "^1.6.0"
+  }
+}

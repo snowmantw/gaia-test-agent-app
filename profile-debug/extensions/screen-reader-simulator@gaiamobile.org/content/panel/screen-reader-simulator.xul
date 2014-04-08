@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<?xml-stylesheet href="chrome://browser/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/content/devtools/widgets.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/content/devtools/inspector/inspector.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/devtools/common.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/devtools/widgets.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/devtools/inspector.css" type="text/css"?>
+<?xml-stylesheet href="screen-reader-simulator.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://screen-reader-simulator/locale/screen-reader-simulator.dtd">
+
+<window xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/javascript;version=1.8"
+          src="chrome://browser/content/devtools/theme-switching.js"/>
+
+  <script src="screen-reader-simulator.js"></script>
+
+  <box flex="1" class="devtools-responsive-container theme-body">
+    <hbox flex="1">
+    <toolbar class="devtools-toolbar" id="sr-sidebar"
+             style="-moz-box-align: center; -moz-box-orient: vertical;">
+      <toolbarbutton class="devtools-toolbarbutton" type="checkbox"
+                     id="screenreader-toggle"
+                     oncommand="screenReader.toggle(this.checked)"
+                     label="&screenReaderEnable;" tabindex="0"/>
+      <toolbarspacer/>
+      <toolbaritem>
+        <label value="&screenReaderOneFinger;"/>
+      </toolbaritem>
+      <toolbaritem id="single-finger">
+        <grid>
+          <columns>
+            <column/>
+            <column/>
+            <column/>
+          </columns>
+          <rows>
+            <row>
+              <spacer/>
+              <button class="devtools-toolbarbutton swipe-up"
+                      tooltiptext="&screenReaderOneFingerSwipeUp;"
+                      oncommand="screenReader.swipeUp(1)" tabindex="0"/>
+              <spacer/>
+            </row>
+            <row>
+              <button class="devtools-toolbarbutton swipe-left"
+                      tooltiptext="&screenReaderOneFingerSwipeLeft;"
+                      oncommand="screenReader.swipeLeft(1)" tabindex="0"/>
+              <button class="devtools-toolbarbutton double-tap"
+                      tooltiptext="&screenReaderOneFingerDoubleTap;"
+                      oncommand="screenReader.doubleTap(1)" tabindex="0"/>
+              <button class="devtools-toolbarbutton swipe-right"
+                      tooltiptext="&screenReaderOneFingerSwipeRight;"
+                      oncommand="screenReader.swipeRight(1)" tabindex="0"/>
+            </row>
+            <row>
+              <spacer/>
+              <button class="devtools-toolbarbutton swipe-down"
+                      tooltiptext="&screenReaderOneFingerSwipeDown;"
+                      oncommand="screenReader.swipeDown(1)" tabindex="0"/>
+              <spacer/>
+            </row>
+          </rows>
+        </grid>
+      </toolbaritem>
+      <toolbarspacer/>
+      <toolbaritem>
+        <label value="&screenReaderTwoFinger;"/>
+      </toolbaritem>
+      <toolbaritem id="double-finger">
+        <grid>
+          <columns>
+            <column/>
+            <column/>
+            <column/>
+          </columns>
+          <rows>
+            <row>
+              <spacer/>
+              <button class="devtools-toolbarbutton swipe-up"
+                      tooltiptext="&screenReaderTwoFingerSwipeUp;"
+                      oncommand="screenReader.swipeUp(2)" tabindex="0"/>
+              <spacer/>
+            </row>
+            <row>
+              <button class="devtools-toolbarbutton swipe-left"
+                      tooltiptext="&screenReaderTwoFingerSwipeLeft;"
+                      oncommand="screenReader.swipeLeft(2)" tabindex="0" />
+              <spacer/>
+              <button class="devtools-toolbarbutton swipe-right"
+                      tooltiptext="&screenReaderTwoFingerSwipeRight;"
+                      oncommand="screenReader.swipeRight(2)" tabindex="0"/>
+            </row>
+            <row>
+              <spacer/>
+              <button class="devtools-toolbarbutton swipe-down"
+                      tooltiptext="&screenReaderTwoFingerSwipeDown;"
+                      oncommand="screenReader.swipeDown(2)" tabindex="0"/>
+              <spacer/>
+            </row>
+          </rows>
+        </grid>
+
+      </toolbaritem>
+    </toolbar>
+    <vbox flex="1">
+      <toolbar class="devtools-toolbar">
+        <toolbarspacer flex="1"/>
+
+        <toolbaritem>
+          <label value="&screenReaderLogging;"/>
+        </toolbaritem>
+        <toolbaritem>
+          <menulist id="logLevelChooser" class="devtools-menulist" oncommand="screenReader.loggingChanged(this);">
+            <menupopup>
+              <menuitem label="&screenReaderLoggingDebug;"/>
+              <menuitem label="&screenReaderLoggingInfo;" selected="true"/>
+              <menuitem label="&screenReaderLoggingWarning;"/>
+              <menuitem label="&screenReaderLoggingError;"/>
+            </menupopup>
+          </menulist>
+        </toolbaritem>
+      </toolbar>
+      <richlistbox id="sr-output" orient="vertical" flex="1"
+                   seltype="multiple" context="output-contextmenu"
+                   style="direction:ltr;"/>
+
+    </vbox>
+  </hbox>
+  </box>
+</window>

@@ -1,0 +1,129 @@
+.sr-controls > toolbarbutton { 
+  min-width: 32px;
+  //min-height: 22px;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  border-width: 0;
+  -moz-border-end-width: 1px;
+  outline-offset: -3px;
+}
+
+.sr-controls > toolbarbutton:last-of-type {
+  -moz-border-end-width: 0;
+}
+
+.sr-controls {
+  box-shadow: 0 1px 0 hsla(210,16%,76%,.15) inset,
+              0 0 0 1px hsla(210,16%,76%,.15) inset,
+              0 1px 0 hsla(210,16%,76%,.15);
+  border: 1px solid hsla(210,8%,5%,.45);
+  border-radius: 3px;
+  margin: 0 3px;
+}
+
+#sr-output {
+  -moz-appearance: none;
+  border-bottom: 1px solid ThreeDShadow;
+  margin: 0;
+  font-size: 1rem;
+}
+
+#sr-output richlistitem { 
+  margin-left: 3px;
+}
+
+#sr-output .speech {
+  font-style: italic;
+}
+
+#sr-output .speech:before { 
+  content: "Speak: ";
+  font-weight: bold;
+  font-style: normal;
+}
+
+#sr-output .logMessage { 
+  white-space: pre;
+}
+
+#sr-output .debugMessage { 
+  color: #555;
+}
+
+#sr-output .infoMessage { 
+  color: #333;
+}
+
+#sr-output .warningMessage { 
+  color: orange;
+}
+
+#sr-output .errorMessage { 
+  color: red;
+}
+
+#single-finger button { 
+  list-style-image: url("single-finger-icons.png");
+}
+
+#double-finger button { 
+  list-style-image: url("double-finger-icons.png");
+}
+
+button.swipe-up { 
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+button.swipe-right { 
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+button.swipe-down { 
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+button.swipe-left { 
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
+button.double-tap { 
+  -moz-image-region: rect(0px, 80px, 16px, 64px);
+}
+
+#scroll-left {
+  list-style-image: url("control-scroll-left.png");
+}
+
+#scroll-up {
+  list-style-image: url("control-scroll-up.png");
+}
+
+#scroll-right {
+  list-style-image: url("control-scroll-right.png");
+}
+
+#scroll-down {
+  list-style-image: url("control-scroll-down.png");
+}
+
+menulist { 
+  background-color: red;
+}
+
+grid > rows > row > spacer, button.devtools-toolbarbutton { 
+  min-width: 0 !important;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+grid > column { 
+  min-width: 0;
+  width: 32px;
+}
+
+#sr-sidebar toolbarspacer { 
+  height: 15px;
+}

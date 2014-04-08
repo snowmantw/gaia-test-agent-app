@@ -1,0 +1,25 @@
+{
+  "nyx-core.gaiamobile.org": {
+    "origin": "http://nyx-core.gaiamobile.org:8080",
+    "installOrigin": "http://nyx-core.gaiamobile.org:8080",
+    "receipt": null,
+    "installTime": 132333986000,
+    "manifestURL": "http://nyx-core.gaiamobile.org:8080/manifest.webapp",
+    "appStatus": 3,
+    "localId": 23,
+    "id": "nyx-core.gaiamobile.org",
+    "basePath": "/Users/snowmantw/Projects/nyx-playground/build/profile-debug/webapps",
+    "removable": true,
+    "installerAppId": 0,
+    "installerIsBrowser": false,
+    "installState": "installed",
+    "storeId": "",
+    "storeVersion": 0,
+    "role": "system",
+    "downloading": false,
+    "readyToApplyDownload": false,
+    "name": "NyxCore",
+    "csp": "",
+    "redirects": null
+  }
+}
